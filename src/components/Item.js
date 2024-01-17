@@ -1,8 +1,14 @@
+
 import React from 'react'
 
-const Item = () => {
+const Item = ({ item }) => {
     return (
-        <li>Item</li>
+        <li>
+            <span style={item.packed ? { textDecoration: "line-through" } : {}}>
+                {item.quantity}{item.description}
+            </span>
+            <button>❌</button>
+        </li >
     )
 }
 
